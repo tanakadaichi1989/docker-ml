@@ -1,4 +1,4 @@
-# このコードに関する記事ß
+# このコードに関する記事
 # https://qiita.com/tanakadaichi_1989/items/c655d93a1fae56f2be07
 
 #モジュールの読み込み
@@ -77,7 +77,6 @@ print("Test accuracy:",score[1])
 sample = [7.9, 0.35, 0.46, 5, 0.078, 15, 37, 0.9973, 3.35, 0.86, 12.8]
 print("\n")
 print("--サンプルワインのデータ--")
-
 print(sample)
 
 #ポイント：ワインの成分をNumpyのArrayにしないとエラーが出る
@@ -93,10 +92,9 @@ print("\n")
 #学習履歴のグラフ化に関する参考資料
 #http://aidiary.hatenablog.com/entry/20161109/1478696865
 
-def plot_history(history):
-    # print(history.history.keys())
-    
+def plot_history(history):  
     # 精度の履歴をプロット
+    # print(history.history)
     plt.plot(['acc'])
     plt.plot(['val_acc'])
     plt.title('model accuracy')
@@ -106,7 +104,7 @@ def plot_history(history):
     plt.show()
     
     # 損失の履歴をプロット
-    plt.plot(['loss'])
+    plt.plot(history.history['loss'])
     plt.plot(['val_loss'])
     plt.title('model loss')
     plt.xlabel('epoch')
