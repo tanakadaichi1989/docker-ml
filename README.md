@@ -55,3 +55,37 @@ run main.py
 
 散布図も表示可能
 ![スクリーンショット 2023-07-15 22.30.31.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/199441/abb48535-f797-991c-e70e-cb1f3134ee95.png)
+
+### 5. Docker コンテナの停止・削除
+Docker コンテナの一覧を表示する
+```
+docker ps
+```
+
+上記コマンドの実行結果
+```
+CONTAINER ID   IMAGE            COMMAND                   CREATED             STATUS             PORTS                                            NAMES
+7b5b9230ebf7   docker-ml-wine   "/bin/sh -c 'jupyter…"   About an hour ago   Up About an hour   0.0.0.0:6006->6006/tcp, 0.0.0.0:8888->8888/tcp   docker-ml-wine-1
+```
+
+Docker コンテナを停止する
+```
+docker stop 7b5
+```
+
+Docker コンテナを削除する
+```
+docker rm 7b5
+```
+
+### 6. Docker イメージの削除
+Docker イメージの一覧を表示する
+```
+docker images
+```
+
+上記コマンド実行結果
+```
+REPOSITORY           TAG       IMAGE ID       CREATED        SIZE
+docker-ml-wine       latest    3c9361d00629   15 hours ago   4.28GB
+```
