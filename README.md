@@ -89,3 +89,8 @@ docker images
 REPOSITORY           TAG       IMAGE ID       CREATED        SIZE
 docker-ml-wine       latest    3c9361d00629   15 hours ago   4.28GB
 ```
+
+Docker イメージを削除する
+```
+docker rmi 3c9
+```
